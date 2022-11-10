@@ -1,0 +1,54 @@
+{
+    "name": "@antokhio/react-three-jsartoolkitnft",
+    "version": "0.1.0",
+    "description": "@webarkit/jsartoolkit-nft implementation for @react-three/fiber",
+    "keywords": [
+        "ar",
+        "arnft",
+        "jsartoolkit",
+        "react-three"
+    ],
+    "author": "Anton Kalabukhov",
+    "contributors": [],
+    "homepage": "https://github.com/antokhio/react-three-jsartoolkitnft#readme",
+    "repository": "github:antokhio/react-three-jsartoolkitnft",
+    "license": "MIT",
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "files": [
+        "dist/*",
+        "src/*"
+    ],
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js"
+    },
+    "sideEffects": false,
+    "scripts": {
+        "build": "rimraf dist && vite build && tsc",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "@react-three/fiber": "^8.9.1",
+        "@types/node": "^18.11.9",
+        "@types/react": "^18.0.25",
+        "@types/react-dom": "^18.0.8",
+        "@types/three": "^0.146.0",
+        "prettier": "^2.7.1",
+        "react-merge-refs": "^2.0.1",
+        "typescript": "^4.8.4",
+        "vite": "^3.2.3",
+        "vitest": "^0.25.1"
+    },
+    "dependencies": {
+        "@webarkit/jsartoolkit-nft": "^1.1.5"
+    },
+    "peerDependencies": {
+        "@react-three/fiber": ">=8.9.1",
+        "react": ">=18.2.0",
+        "three": ">=0.146.0"
+    }
+}
