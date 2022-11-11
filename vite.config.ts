@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import * as path from 'path';
 import { defineConfig } from 'vite';
+import OMT from '@surma/rollup-plugin-off-main-thread';
 
 export default defineConfig({
     test: {
@@ -9,6 +10,7 @@ export default defineConfig({
     },
     worker: {
         format: 'es',
+        plugins: [OMT()],
     },
     build: {
         minify: false,
