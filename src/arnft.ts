@@ -1,4 +1,6 @@
 import type { Camera, Group, Matrix4, WebGLRenderer } from 'three';
+// @ts-ignore
+import ARNFTWorker from 'web-worker:./workers/arnft.worker';
 
 const isMobile = () => /Android|mobile|iPad|iPhone/i.test(navigator.userAgent);
 
@@ -48,7 +50,8 @@ export class ARNFT {
     infos: { id: number; width: number; height: number; dpi: number }[];
     constructor() {
         // Initialize worker
-        const worker = new Worker(new URL('./workers/arnft.worker.ts', import.meta.url), { type: 'module' });
+        //const worker = new Worker(new URL('./workers/arnft.worker.ts', import.meta.url), { type: 'module' });
+        const worker = new ARNFTWorker() as Worker;
         worker.onmessage = (args) => this.onMessage(args);
         worker.onerror = (e) => console.error(e);
         this.worker = worker;

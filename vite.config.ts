@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import * as path from 'path';
 import { defineConfig } from 'vite';
-import OMT from '@surma/rollup-plugin-off-main-thread';
+import webWorkerLoader from 'rollup-plugin-web-worker-loader';
 
 export default defineConfig({
     test: {
@@ -10,6 +10,12 @@ export default defineConfig({
     },
     worker: {
         format: 'iife',
+        plugins: [
+            webWorkerLoader({
+                inline: true,
+                forceInline: true,
+            }),
+        ],
     },
     build: {
         minify: false,
