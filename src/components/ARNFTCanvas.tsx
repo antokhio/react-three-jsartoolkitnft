@@ -1,8 +1,8 @@
 import React, { CSSProperties, useRef } from 'react';
-import { mergeRefs } from 'react-merge-refs';
 import { Canvas, Props as CanvasProps } from '@react-three/fiber';
 import { ARNFTVideo } from './ARNFTVideo';
 import { ARNFTProvider } from './ARNFTProvider';
+import { mergeRefs } from '../utilites';
 
 type ARNFTCanvasProps = {
     camera_para?: string;

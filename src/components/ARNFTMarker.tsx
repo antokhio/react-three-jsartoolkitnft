@@ -1,7 +1,7 @@
 import React from 'react';
 import * as THREE from 'three';
+import { mergeRefs } from '../utilites';
 import { useARNFTMarker } from './ARNFTProvider';
-import { mergeRefs } from 'react-merge-refs';
 
 type ARNFTMarkerProps = JSX.IntrinsicElements['group'] & {
     markers: string[];

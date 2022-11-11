@@ -9,13 +9,12 @@ export default defineConfig({
         setupFiles: 'tests/setupTests.ts',
     },
     worker: {
-        format: 'es',
-        plugins: [OMT()],
+        format: 'iife',
     },
     build: {
         minify: false,
         sourcemap: true,
-        target: 'es2020',
+        target: 'esnext',
         lib: {
             formats: ['cjs', 'es'],
             entry: 'src/index.ts',
