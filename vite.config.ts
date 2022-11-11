@@ -20,6 +20,7 @@ export default defineConfig({
             entry: 'src/index.ts',
             fileName: '[name]',
         },
+        assetsDir: './',
         rollupOptions: {
             external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
             treeshake: false,
