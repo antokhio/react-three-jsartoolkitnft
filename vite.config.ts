@@ -7,10 +7,13 @@ export default defineConfig({
         dir: 'tests',
         setupFiles: 'tests/setupTests.ts',
     },
+    worker: {
+        format: 'es',
+    },
     build: {
         minify: false,
         sourcemap: true,
-        target: 'es2018',
+        target: 'es2020',
         lib: {
             formats: ['cjs', 'es'],
             entry: 'src/index.ts',

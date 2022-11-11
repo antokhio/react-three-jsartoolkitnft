@@ -1,5 +1,8 @@
 {
     "name": "@antokhio/react-three-jsartoolkitnft",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/antokhio"
+    },
     "version": "0.1.0",
     "description": "@webarkit/jsartoolkit-nft implementation for @react-three/fiber",
     "keywords": [
