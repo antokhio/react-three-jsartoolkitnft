@@ -9,12 +9,6 @@ export default defineConfig({
     },
     worker: {
         format: 'iife',
-        //     plugins: [
-        //         webWorkerLoader({
-        //             inline: true,
-        //             forceInline: true,
-        //         }),
-        //     ],
     },
     build: {
         minify: false,
