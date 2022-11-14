@@ -48,7 +48,7 @@ export class ARNFT {
     infos: { id: number; width: number; height: number; dpi: number }[];
     constructor() {
         // Initialize worker
-        const url = new URL('./workers/arnft.worker.ts?worker&url', import.meta.url);
+        const url = new URL('./workers/arnft.worker.ts?worker', import.meta.url);
         const getWorker = () => new Worker(url, { type: 'module' });
         const worker = getWorker() as Worker;
 
