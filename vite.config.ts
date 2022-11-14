@@ -1,7 +1,6 @@
 /// <reference types="vitest" />
 import * as path from 'path';
 import { defineConfig } from 'vite';
-import webWorkerLoader from 'rollup-plugin-web-worker-loader';
 
 export default defineConfig({
     test: {
@@ -10,12 +9,12 @@ export default defineConfig({
     },
     worker: {
         format: 'iife',
-        plugins: [
-            webWorkerLoader({
-                inline: true,
-                forceInline: true,
-            }),
-        ],
+        //     plugins: [
+        //         webWorkerLoader({
+        //             inline: true,
+        //             forceInline: true,
+        //         }),
+        //     ],
     },
     build: {
         minify: false,

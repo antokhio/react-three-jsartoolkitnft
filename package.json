@@ -3,7 +3,7 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/antokhio"
     },
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "@webarkit/jsartoolkit-nft implementation for @react-three/fiber",
     "keywords": [
         "ar",
@@ -46,8 +46,7 @@
         "vitest": "^0.25.1"
     },
     "dependencies": {
-        "@webarkit/jsartoolkit-nft": "^1.1.5",
-        "rollup-plugin-web-worker-loader": "^1.6.1"
+        "@webarkit/jsartoolkit-nft": "^1.1.5"
     },
     "peerDependencies": {
         "@react-three/fiber": ">=8.9.1",
