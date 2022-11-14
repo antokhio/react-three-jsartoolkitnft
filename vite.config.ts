@@ -19,7 +19,7 @@ export default defineConfig({
     build: {
         minify: false,
         sourcemap: true,
-        target: 'esnext',
+        target: 'es2020',
         lib: {
             formats: ['cjs', 'es'],
             entry: 'src/index.ts',

@@ -1,1 +1,1 @@
-export * from './arnft.worker';
+export { default as arnftWorker } from './arnft.worker';
