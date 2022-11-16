@@ -8,7 +8,7 @@ export default defineConfig({
         setupFiles: 'tests/setupTests.ts',
     },
     worker: {
-        format: 'iife',
+        format: 'es',
     },
     build: {
         minify: false,
@@ -22,7 +22,7 @@ export default defineConfig({
         assetsDir: './',
         rollupOptions: {
             external: (id: string) => !id.startsWith('.') && !path.isAbsolute(id),
-            treeshake: false,
+            treeshake: true,
             output: {
                 preserveModules: true,
                 sourcemapExcludeSources: true,

@@ -48,13 +48,13 @@ export class ARNFT {
     infos: { id: number; width: number; height: number; dpi: number }[];
     constructor() {
         // Initialize worker
-        // const worker = new Worker(new URL('./workers/arnft.worker.ts', import.meta.url), {
-        //     type: 'module',
-        // }) as Worker;
+        const worker = new Worker(new URL('./workers/arnft.worker.ts', import.meta.url), {
+            type: 'module',
+        }) as Worker;
 
-        const url = new URL('./workers/arnft.worker.ts', import.meta.url);
-        const getWorker = () => new Worker(url, { type: 'module' });
-        const worker = getWorker() as Worker;
+        // const url = new URL('./workers/arnft.worker.ts', import.meta.url);
+        // const getWorker = () => new Worker(url, { type: 'module' });
+        // const worker = getWorker() as Worker;
 
         worker.onmessage = (args) => this.onMessage(args);
         worker.onerror = (e) => console.error(e);
